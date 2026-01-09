@@ -64,3 +64,9 @@ Endpoints (ejemplos):
   - Crear préstamo: POST http://localhost:8080/api/prestamos
     {"libroId":1,"socioId":1}
   - Devolver: PUT http://localhost:8080/api/prestamos/1/devolver
+  
+## Iteración 4 (cierre del MVP)
+- Integración completa del proyecto.
+- Pruebas desde cero con base de datos limpia.
+- Flujo principal validado (libros → socios → préstamos).
+- MVP listo para documentación y defensa.
