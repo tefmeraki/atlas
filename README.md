@@ -36,5 +36,5 @@ Comprobar salud:
 ## Verificación rápida tras subir
 - Arranca: mvn spring-boot:run
 - Comprueba:
-> http://localhost:8080/actuator/health → UP
-> http://localhost:8080/api/ping → {"status":"ok","db":1}
+  - http://localhost:8080/actuator/health → UP
+  - http://localhost:8080/api/ping → {"status":"ok","db":1}
