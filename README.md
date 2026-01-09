@@ -27,3 +27,8 @@ Comprobar salud:
 - `http://localhost:8080/actuator/health`
 
 > Nota: En iteraciones posteriores se añaden entidades, repositorios y endpoints del MVP.
+
+
+## Iteración 2 (persistencia)
+- Añadidas entidades JPA y repositorios.
+- Endpoint `/api/ping` devuelve `{status:"ok", db:1}` si hay conexión a BD.
