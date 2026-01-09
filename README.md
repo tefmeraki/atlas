@@ -38,3 +38,29 @@ Comprobar salud:
 - Comprueba:
   - http://localhost:8080/actuator/health → UP
   - http://localhost:8080/api/ping → {"status":"ok","db":1}
+
+## Iteración 3 (CRUD + préstamos)
+- CRUD REST mínimo para libros y socios.
+- Préstamos: crear y devolver.
+- Regla MVP: no se permite 2 préstamos activos del mismo libro (control en servicio).
+
+Endpoints (ejemplos):
+- GET/POST/PUT/DELETE `/api/libros`
+- GET/POST/PUT/DELETE `/api/socios`
+- GET `/api/prestamos`
+- POST `/api/prestamos` body `{ "libroId": 1, "socioId": 1 }`
+- PUT `/api/prestamos/{id}/devolver`
+
+## Prueba rápida del MVP (local)
+- Ejecutar db/schema.sql
+- (Opcional) db/data.sql
+- mvn spring-boot:run
+- Probar con Postman/curl:
+- Listar libros: GET http://localhost:8080/api/libros
+  - Crear libro: POST http://localhost:8080/api/libros
+    {"titulo":"Libro X","autor":"Autor Y","isbn":"111","anioPublicacion":2020}
+  - Crear socio: POST http://localhost:8080/api/socios
+    {"nombre":"Ana","apellidos":"Pérez","email":"ana2@example.com"}
+  - Crear préstamo: POST http://localhost:8080/api/prestamos
+    {"libroId":1,"socioId":1}
+  - Devolver: PUT http://localhost:8080/api/prestamos/1/devolver
