@@ -32,3 +32,9 @@ Comprobar salud:
 ## Iteración 2 (persistencia)
 - Añadidas entidades JPA y repositorios.
 - Endpoint `/api/ping` devuelve `{status:"ok", db:1}` si hay conexión a BD.
+
+## Verificación rápida tras subir
+Arranca: mvn spring-boot:run
+Comprueba:
+http://localhost:8080/actuator/health → UP
+http://localhost:8080/api/ping → {"status":"ok","db":1}
